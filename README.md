@@ -1,4 +1,4 @@
 # 404ERROR
-# <Hyperlinked Overview>
-# <Instruction for prototype>
-# <Login Credentials>
+# Hyperlinked Overview
+# Instruction for prototype
+# Login Credentials
