@@ -1,7 +1,7 @@
 let displayMenu = false;
 let marker_group;
 
-var myMap = L.map("map").setView([-27.497, 153.012], 14);
+var myMap = L.map("map").setView([-27.498320, 153.018269], 14);
 L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidXFpZHJ1Z28iLCJhIjoiY2tlcDdmbDV2MDc2ZjJ4bnk5bTgwcmkwbSJ9.aiKl3J-I-lVcj0iTllZlpg", 
 { 
     maxZoom: 18, 
@@ -11,6 +11,14 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomControl: false,
     accessToken: 'your.mapbox.access.token'
 }).addTo(myMap);
+
+var userIcon = L.icon({
+    iconUrl: './images/user-location.png',
+    iconSize: [35, 35],
+    iconAnchor: [15, 15], 
+    popupAnchor: [10, 10]
+});
+L.marker([-27.500627, 153.024017], {icon: userIcon}).addTo(myMap);
 
 function showMenu() {
     if (displayMenu) {
@@ -53,7 +61,19 @@ function showHotzone() {
         color: 'red',
         fillColor: '#f03',
     });
-    marker_group = new L.layerGroup([polygon1, polygon2]).addTo(myMap);
+    var polygon3 = L.polygon([
+        [-27.497154, 153.034807],
+        [-27.496866, 153.032425],
+        [-27.500067, 153.029394], 
+        [-27.500755, 153.034681], 
+        [-27.499011, 153.035294]
+    ], {
+        color: 'red',
+        fillColor: '#f03',
+    });
+    marker_group = new L.layerGroup([polygon1, polygon2, polygon3]).addTo(myMap);
+
+    $("#attention-model").css("display", "flex");
 }
 
 function showDensity() {
@@ -112,3 +132,7 @@ function showSecurity() {
     var marker3 = L.marker([-27.482562438078748, 153.003996980359], {icon: icon}).bindPopup("The road blocked here.");
     marker_group = new L.layerGroup([marker1, marker2, marker3]).addTo(myMap);
 }
+
+$("#attention-model").click(function() {
+    $("#attention-model").css("display", "none");
+});
