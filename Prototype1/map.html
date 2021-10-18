@@ -11,14 +11,21 @@
 </head>
 <body>
     <div class="header">Brisbane</div>
+    <div class="map-help" onclick="displayHelp()"></div>
     <div class="container">
         <div id="map"></div>
 
+        <div id="heat-legend">
+            <div>High</div>
+            <div id="legend-color"></div>
+            <div>Low</div>
+        </div>
+
         <div id="btn-switch">
-            <div id="btn-main" onclick="showMenu()">
+            <!-- <div id="btn-main" onclick="showMenu()">
                 <span class="btn-icon" id="main-icon"></span>
-            </div>
-            <div class="btn-menu" id="btn-area" onclick="showHotzone()">
+            </div> -->
+            <div class="btn-menu selected" id="btn-area" onclick="showHotzone()">
                 <span class="btn-icon" id="icon-risk"></span>
                 <span class="btn-desc">Risk Area</span>
             </div>
@@ -38,6 +45,35 @@
                 <span id="attention-content">
                     You are near an area of high COVID risk, 
                     please make sure to put your mask on and be careful!
+                </span>
+            </div>
+        </div>
+
+        <div class="model" id="help-model">
+            <div class="model-panel" id="help-panel">
+                <span id="attention-title">
+                    <img src="./images/virus-green.png" alt="" width="20px">
+                    Risk Area
+                </span>
+                <span id="attention-content">
+                    Risk areas are public areas where recent diagnosis have been to, you must wear
+                    a mask when coming through these areas.
+                </span>
+                <span id="attention-title">
+                    <img src="./images/density-green.png" alt="" width="20px">
+                    Personnel Density
+                </span>
+                <span id="attention-content">
+                    Personnel Density visualize the number of people on the map. Places in red means 
+                    high density, and blue for low density.
+                </span>
+                <span id="attention-title">
+                    <img src="./images/security-green.png" alt="" width="20px">
+                    Area Security
+                </span>
+                <span id="attention-content">
+                    Area Security shows the ongoing event or accidents which might be dangerous to get 
+                    close to these places (such as car accident, parade, or crime scene).
                 </span>
             </div>
         </div>

@@ -20,6 +20,8 @@ var userIcon = L.icon({
 });
 L.marker([-27.500627, 153.024017], {icon: userIcon}).addTo(myMap);
 
+showHotzone();
+
 function showMenu() {
     if (displayMenu) {
         $("#btn-area").css("display", "none");
@@ -36,8 +38,10 @@ function showMenu() {
 }
 
 function showHotzone() {
-    showMenu();
-    $("#main-icon").css("background-image", "url('./images/virus-active.png')");
+    // showMenu();
+    // $("#main-icon").css("background-image", "url('./images/virus-active.png')");
+    $(".btn-menu").removeClass("selected");
+    $("#btn-area").addClass("selected");
 
     if (marker_group) {
         marker_group.clearLayers();
@@ -72,13 +76,16 @@ function showHotzone() {
         fillColor: '#f03',
     });
     marker_group = new L.layerGroup([polygon1, polygon2, polygon3]).addTo(myMap);
+    $("#heat-legend").css("display", "none");
 
     $("#attention-model").css("display", "flex");
 }
 
 function showDensity() {
-    showMenu();
-    $("#main-icon").css("background-image", "url('./images/density-active.png')");
+    // showMenu();
+    // $("#main-icon").css("background-image", "url('./images/density-active.png')");
+    $(".btn-menu").removeClass("selected");
+    $("#btn-density").addClass("selected");
 
     if (marker_group) {
         marker_group.clearLayers();
@@ -112,11 +119,14 @@ function showDensity() {
 
     ], {radius: 50, blur: 40});
     marker_group = new L.layerGroup([heatLayer]).addTo(myMap);
+    $("#heat-legend").css("display", "block");
 }
 
 function showSecurity() {
-    showMenu();
-    $("#main-icon").css("background-image", "url('./images/security-active.png')");
+    // showMenu();
+    // $("#main-icon").css("background-image", "url('./images/security-active.png')");
+    $(".btn-menu").removeClass("selected");
+    $("#btn-security").addClass("selected");
 
     if (marker_group) {
         marker_group.clearLayers();
@@ -131,8 +141,17 @@ function showSecurity() {
     var marker2 = L.marker([-27.508075395653105, 153.01406535312697], {icon: icon}).bindPopup("Car accident happened here.");
     var marker3 = L.marker([-27.482562438078748, 153.003996980359], {icon: icon}).bindPopup("The road blocked here.");
     marker_group = new L.layerGroup([marker1, marker2, marker3]).addTo(myMap);
+    $("#heat-legend").css("display", "none");
 }
 
 $("#attention-model").click(function() {
     $("#attention-model").css("display", "none");
+});
+
+function displayHelp() {
+    $("#help-model").css("display", "flex");
+}
+
+$("#help-model").click(function() {
+    $("#help-model").css("display", "none");
 });
