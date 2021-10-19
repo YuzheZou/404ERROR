@@ -24,18 +24,18 @@ Code for Prototype 2<br>
 https://github.com/YuzheZou/404ERROR/tree/main/Prototype2<br>
 # Instruction for prototype
 <b>Functions for Prototype 1:</b><br>
-COVID-19 Map: <br>
+* COVID-19 Map: <br>
 Show users their geographic relationship with high-risk areas. Users can also switch the map display mode to population density and regional safety index respectively by pressing the button.<br>
-COVID-19 Statistic: <br>
+* COVID-19 Statistic: <br>
 Update various data of the new crown epidemic in real time and support browsing past data.<br>
-COVID-19 Articles: <br>
+* COVID-19 Articles: <br>
 Provides users with the latest COVID-19 news and other professional literature.<br><br>
 <b>Functions for Prototype 2:</b><br>
-COVID-19 Map: <br>
+* COVID-19 Map: <br>
 Show users their geographic relationship with high-risk areas. Users can also switch the map display mode to population density and regional safety index respectively by pressing the button.<br>
-Health Tree: <br>
+* Health Tree: <br>
 Visually display the user's health status. It can judge whether the user has a health risk based on the distance between the user and the high-risk area, the user's travel trajectory, and the hospital nucleic acid detection result.<br>
-Hospital services:<br>
+* Hospital services:<br>
 Help users make NAT appointments and vaccine appointments.<br>
 
 # Login Credentials
