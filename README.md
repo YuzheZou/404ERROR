@@ -26,6 +26,8 @@ https://github.com/YuzheZou/404ERROR/tree/main/Prototype1<br>
 https://github.com/YuzheZou/404ERROR/tree/main/Prototype2<br>
 
 # Instruction for prototype
+<b>Press F12 on keyboard and click “toggle device toolbar” before use!!</b><br><br>
+
 <b>Functions for Prototype 1:</b><br>
 * COVID-19 Map: <br>
 Show users their geographic relationship with high-risk areas. Users can also switch the map display mode to population density and regional safety index respectively by pressing the button.<br>
